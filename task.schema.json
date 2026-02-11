@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/task.schema.json",
+  "title": "Firestore ToDo App - Task Document",
+  "type": "object",
+  "additionalProperties": false,
+
+  "properties": {
+    "completed": {
+      "type": "boolean",
+      "description": "Whether the task has been finished",
+      "examples": [true]
+    },
+
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Task creation timestamp (Firestore Timestamp)",
+      "examples": ["2024-06-19T14:05:53Z"]
+    },
+
+    "details": {
+      "type": "string",
+      "maxLength": 10000,
+      "examples": ["We are testing add task, but still have more to go."]
+    },
+
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300,
+      "examples": ["Finish This App"]
+    },
+
+    "user": {
+      "type": "string",
+      "pattern": "^/users/[A-Za-z0-9_-]{10,}$",
+      "description": "Firestore Document Reference to a user document",
+      "examples": ["/users/DJEwXBO3dxfbPVHpfl6ZmqWpkJxx"]
+    }
+  },
+
+  "required": [
+    "title",
+    "completed",
+    "created",
+    "user"
+  ]
+}
