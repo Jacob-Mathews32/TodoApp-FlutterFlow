@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/user.schema.json",
+  "title": "Firestore ToDo App - User Document",
+  "type": "object",
+  "additionalProperties": false,
+
+  "properties": {
+    "birthdate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Firestore Timestamp serialized as RFC3339 string",
+      "examples": ["2003-05-02T04:00:00Z"]
+    },
+
+    "created_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Account creation timestamp",
+      "examples": ["2024-06-17T09:55:17Z"]
+    },
+
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "examples": ["Casey"]
+    },
+
+    "email": {
+      "type": "string",
+      "format": "email",
+      "maxLength": 320,
+      "examples": ["casey@mail.com"]
+    },
+
+    "photo_url": {
+      "type": "string",
+      "format": "uri",
+      "maxLength": 2048,
+      "examples": ["https://firebasestorage.googleapis.com/v0/wyz"]
+    },
+
+    "uid": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 128,
+      "description": "Firebase Authentication UID",
+      "examples": ["5QJ30SbaohTD45Zb3DuijTbmKIxx"]
+    }
+  },
+
+  "required": [
+    "uid",
+    "email",
+    "display_name",
+    "created_time"
+  ]
+}
