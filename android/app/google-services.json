@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "344039649196",
+    "project_id": "todo-zymqyp",
+    "storage_bucket": "todo-zymqyp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344039649196:android:dfcd3c1e110bdba40c5409",
+        "android_client_info": {
+          "package_name": "com.mycompany.todo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPaog-NgvgzBo6tlpRh1nNWphTKAid5Zw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
