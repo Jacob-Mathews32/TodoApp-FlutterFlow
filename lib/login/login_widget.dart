@@ -113,7 +113,7 @@ class _LoginWidgetState extends State<LoginWidget>
                 ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.asset(
-                    'assets/images/Group_7.png',
+                    'assets/images/taskmaker-high-resolution-logo-transparent.png',
                     width: 120.0,
                     fit: BoxFit.contain,
                   ),
